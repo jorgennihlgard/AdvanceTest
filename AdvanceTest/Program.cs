@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -114,8 +115,12 @@ namespace AdvanceTest
             
             car2.SetCar += message.OnStopCar;
 
-           
-           
+           StreamWriter writer = new StreamWriter(@"C:\wamp\filen.txt");
+            writer.Write("Detta ska in i filen");
+            writer.Close();
+            StreamReader reader = new StreamReader(@"C:\wamp\filen.txt");
+            string rr = reader.ReadLine();
+            Console.WriteLine(rr);
             center.PrintCar(car2);
             car2.SetSpeed( 120);
             center.PrintCar(car2);

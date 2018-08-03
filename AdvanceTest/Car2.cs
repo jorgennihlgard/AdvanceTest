@@ -19,7 +19,7 @@ namespace AdvanceTest
             Console.WriteLine($"Speed set {Color +  " " + Speed}");
            
                 OnSetCar(speed);
-           
+          
         }
 
         protected virtual void OnSetCar(int speed)
